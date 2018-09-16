@@ -80,7 +80,7 @@ def densenet(images, num_classes=1001, is_training=False,
 
             #56 x 56 x 2g
             end_point = 'DenseBlock_1'
-            block(net, 6, growth, scope=end_point)
+            net = block(net, 6, growth, scope=end_point)
             end_points[end_point] = net
 
             #56 x 56
@@ -90,7 +90,7 @@ def densenet(images, num_classes=1001, is_training=False,
 
             #28 x 28
             end_point = 'DenseBlock_2'
-            block(net, 12, growth, scope=end_point)
+            net = block(net, 12, growth, scope=end_point)
             end_points[end_point] = net
 
             #28 x 28
@@ -100,7 +100,7 @@ def densenet(images, num_classes=1001, is_training=False,
 
             #14 x 14
             end_point = 'DenseBlock_3'
-            block(net, 24, growth, scope=end_point)
+            net = block(net, 24, growth, scope=end_point)
             end_points[end_point] = net
 
             #14 x 14
@@ -110,7 +110,7 @@ def densenet(images, num_classes=1001, is_training=False,
 
             #7 x 7
             end_point = 'DenseBlock_4'
-            block(net, 16, growth, scope=end_point)
+            net = block(net, 16, growth, scope=end_point)
             end_points[end_point] = net
 
             #7 x 7
